@@ -282,7 +282,7 @@ def fit_predict(X, Y, alpha, methods, params_methods, basemodel, params_basemode
             y_train = Y[:train_size]
             y_predict = np.array([Y[train_size:]])
 
-            random_forest = RandomForestRegressor(n_estimators=n_estimators, criterion='mse', random_state=1,
+            random_forest = RandomForestRegressor(n_estimators=n_estimators, criterion='squared_error', random_state=1,
                                                   bootstrap=False, min_samples_leaf=min_samples_leaf, max_features=max_features)
 
             start_enbpi = time.time()
